@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Hello, ENTEC</title>
+</head>
+<body>
+<nav class="navbar navbar-expand-md navbar-light bg-light border-bottom">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/entec/">ENTEC</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse flex-grow-0" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+                <li>
+                    
+                        <a class="nav-link" href="/common/logout/">entec (로그아웃)</a>
+                    
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>    
+
+<div class="container my-3">
+    <table class="table">
+        <thead class="text-center table-dark">
+            <tr>
+                <th>제목</th> 
+                <th>만든이</th>   
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr th:each="game : ${gameList}">
+                <td class="text-start">
+                    <a href="#" th:text="${game.name}"></a>
+                    <span class="text-danger small ml-2">6</span>
+                </td>
+                <td th:text="${game.creator}"></td>
+            </tr>
+
+            <tr class="text-center">
+                <td class="text-start">
+                    <a href="/entec/8/">[2021.11.21] 정모 A</a>
+                    <span class="text-danger small ml-2">6</span>
+                </td>
+                <td>leedox</td>
+            </tr>
+            
+            <tr class="text-center">
+                <td class="text-start">
+                    <a href="/entec/7/">[2021.11.14] 정모 A</a>
+                    <span class="text-danger small ml-2">6</span>
+                </td>
+                <td>leedox</td>
+            </tr>
+            
+            <tr class="text-center">
+                <td class="text-start">
+                    <a href="/entec/6/">[2021.11.07] 정모 A</a>
+                    <span class="text-danger small ml-2">6</span>
+                </td>
+                <td>leedox</td>
+            </tr>
+            
+            <tr class="text-center">
+                <td class="text-start">
+                    <a href="/entec/5/">[2021.10.31] 대회 B</a>
+                    <span class="text-danger small ml-2">4</span>
+                </td>
+                <td>leedox</td>
+            </tr>
+            
+            <tr class="text-center">
+                <td class="text-start">
+                    <a href="/entec/2/">[2021.10.31] 대회 A</a>
+                    <span class="text-danger small ml-2">4</span>
+                </td>
+                <td>leedox</td>
+            </tr>
+            
+            <tr class="text-center">
+                <td class="text-start">
+                    <a href="/entec/4/">[2020.11.08] 대회 B</a>
+                    <span class="text-danger small ml-2">5</span>
+                </td>
+                <td>leedox</td>
+            </tr>
+            
+            
+        </tbody>
+    </table>
+    <a href="/entec/game/create" class="btn btn-primary">매치 추가</a>
+</div>
+   
+<script src="jquery-3.6.0.min.js"></script> 
+<script src="bootstrap.min.js"></script>
+
+</body>
+</html>
